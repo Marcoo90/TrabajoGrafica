@@ -47,3 +47,18 @@ void updateTruck(int value)
 
     glutTimerFunc(100, updateTruck, 0);
 }
+
+GLfloat carPosition = 0.0f;
+GLfloat carSpeed = 0.05f;
+void updateCar(int value)
+{
+    if(carPosition < - 1.5)
+    {
+        carPosition = 1.2f;
+    }
+    carPosition -= carSpeed;
+
+    glutPostRedisplay();
+
+    glutTimerFunc(100, updateCar, 0);
+}
