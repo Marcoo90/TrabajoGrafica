@@ -18,3 +18,19 @@ int start_flag=0;
 const int font1=(int)GLUT_BITMAP_TIMES_ROMAN_24;
 const int font2=(int)GLUT_BITMAP_HELVETICA_18 ;
 const int font3=(int)GLUT_BITMAP_8_BY_13;
+
+void renderBitmapString(float x, float y, void *font,const char *string)
+{
+    const char *c;
+    glRasterPos2f(x, y);
+    for (c=string; *c != '\0'; c++)
+    {
+        glutBitmapCharacter(font, *c);
+    }
+}
+
+//bool isItNight = false;
+void night(int value);
+GLfloat angle = 0.0f;
+GLfloat truckPosition = 0.0f;
+GLfloat truckSpeed = 0.05f;
