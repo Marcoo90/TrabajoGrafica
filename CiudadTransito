@@ -8,3 +8,13 @@
 #include <unistd.h>
 #include<cmath>
 # define PI   3.14159265358979323846
+
+using namespace std;
+
+void myDisplay();
+int start_flag=0;
+
+
+const int font1=(int)GLUT_BITMAP_TIMES_ROMAN_24;
+const int font2=(int)GLUT_BITMAP_HELVETICA_18 ;
+const int font3=(int)GLUT_BITMAP_8_BY_13;
