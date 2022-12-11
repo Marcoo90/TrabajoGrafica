@@ -34,3 +34,16 @@ void night(int value);
 GLfloat angle = 0.0f;
 GLfloat truckPosition = 0.0f;
 GLfloat truckSpeed = 0.05f;
+
+void updateTruck(int value)
+{
+    if(truckPosition > 1.8)
+    {
+        truckPosition = -1.2f;
+    }
+    truckPosition += truckSpeed;
+
+    glutPostRedisplay();
+
+    glutTimerFunc(100, updateTruck, 0);
+}
