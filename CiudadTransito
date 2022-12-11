@@ -1,0 +1,10 @@
+#include <cstdio>
+#include <iostream>
+#include<GL/gl.h>
+#include <GL/glut.h>
+#include <math.h>
+#include<windows.h>
+#include<mmsystem.h>
+#include <unistd.h>
+#include<cmath>
+# define PI   3.14159265358979323846
