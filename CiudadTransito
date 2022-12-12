@@ -161,3 +161,37 @@ void updateCloud(int value)
 
 	glutTimerFunc(100, updateCloud, 0);
 }
+
+void windmilStick()
+{
+    //windmill stick
+    glColor3ub (255, 255 , 255);
+    glBegin(GL_POLYGON);
+    glVertex2f(0.52f, -0.3f);
+    glVertex2f(0.51f, -1.0f);
+    glVertex2f(0.55f, -1.0f);
+    glVertex2f(0.54f, -0.3f);
+    glEnd();
+}
+
+
+void windMills()
+{
+    float x1,y1,x2,y2;
+    float a;
+    double radius=0.027;
+
+    x1=0.53, y1= -0.30;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(255,255,255);
+    for (a = 1.0f ; a < 360.0f;a += 0.2)
+    {
+        x2 = x1+sin(a)*radius;
+        y2 = y1+cos(a)*radius;
+        glVertex2f(x2,y2);
+    }
+    glEnd();
+
+    //angle+= 0.05;
+}
