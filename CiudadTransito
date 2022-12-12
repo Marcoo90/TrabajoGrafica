@@ -62,3 +62,102 @@ void updateCar(int value)
 
     glutTimerFunc(100, updateCar, 0);
 }
+GLfloat boatPosition = 0.0f;
+GLfloat boatSpeed = 0.005f;
+
+GLfloat cloudPosition = 0.0f;
+GLfloat cloudSpeed = 0.005f;
+
+GLfloat cloud1Position = 0.0f;
+GLfloat cloud1Speed = 0.007f;
+
+GLfloat moonPosition = 0.0f;
+GLfloat moonSpeed = 0.001f;
+
+
+void updateFan(int value)
+{
+    angle += 30.1f;
+
+	glutPostRedisplay();
+
+	glutTimerFunc(1, updateFan, 0);
+
+}
+
+
+void circleSolid(float x, float y, float radius)
+{
+	int triangleAmount = 100; //# of triangles used to draw circle
+
+	GLfloat twicePi = 2.0f * PI;
+
+	glBegin(GL_TRIANGLE_FAN);
+    glVertex2f(x, y); // center of circle
+    for(int i = 0; i <= triangleAmount; i++)
+        {
+            glVertex2f(x + (radius * cos(i *  twicePi / triangleAmount)), y + (radius * sin(i * twicePi / triangleAmount)));
+		}
+    glEnd();
+}
+
+GLfloat sunPosition = 0.0f;
+GLfloat sunSpeed = 0.006f;
+void updateMoon(int value);
+
+void updateSun(int value)
+{
+    if(sunPosition < -.9)
+        {
+            sunPosition = -.9;
+            //isItNight = true;
+        }
+
+    sunPosition -= sunSpeed;
+
+    glutPostRedisplay();
+
+    glutTimerFunc(100, updateSun, 0);
+}
+
+
+void updateMoon(int value)
+{
+    moonPosition += moonSpeed;
+    if(moonPosition > 0.8)
+        {
+            moonPosition = 0.8;
+        }
+        moonPosition += moonSpeed;
+
+    glutPostRedisplay();
+
+	glutTimerFunc(100, updateMoon, 0);
+}
+
+
+void updateBoat(int value) {
+
+    if(boatPosition > .40)
+        {
+            boatPosition = -1.0;
+        }
+    boatPosition += boatSpeed;
+
+	glutPostRedisplay();
+
+	glutTimerFunc(100, updateBoat, 0);
+}
+
+void updateCloud(int value)
+{
+    if(cloudPosition > 0.9)
+        {
+            cloudPosition = -1.4;
+        }
+    cloudPosition += cloudSpeed;
+
+	glutPostRedisplay();
+
+	glutTimerFunc(100, updateCloud, 0);
+}
