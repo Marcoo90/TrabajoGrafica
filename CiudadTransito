@@ -549,3 +549,204 @@ void moon()
 
     glPopMatrix();
 }
+void clouds1()
+{
+    glPushMatrix();
+    glTranslatef(cloud1Position,0.0f, 0.0f);
+    float x1,y1,x2,y2;
+    float x3,y3,x4,y4;
+    float x5,y5,x6,y6;
+    float x7,y7,x8,y8;
+    float x9,y9,x0,y0;
+    float x11,y11,x12,y12;
+    float x13,y13,x14,y14;
+    float a;
+    double radius=0.07;
+
+    x1=-0.4, y1= 0.65;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(239,255,84);
+    for (a=0.0f; a<360.0f; a+=0.2)
+        {
+            x2 = x1+sin(a)*radius;
+            y2 = y1+cos(a)*radius;
+            glVertex2f(x2,y2);
+        }
+        glEnd();
+
+    x3=-0.35, y3= 0.56;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(239,255,84);
+    for (a=0.0f; a<360.0f; a+=0.2)
+        {
+            x4 = x3+sin(a)*radius;
+            y4 = y3+cos(a)*radius;
+            glVertex2f(x4,y4);
+        }
+        glEnd();
+
+    x5=-0.35, y5= 0.7;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(239,255,84);
+    for (a=0.0f; a<360.0f; a+=0.2)
+        {
+            x6 = x5+sin(a)*radius;
+            y6 = y5+cos(a)*radius;
+            glVertex2f(x6,y6);
+        }
+        glEnd();
+
+    x7=-0.26, y7= 0.56;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(239,255,84);
+    for (a=0.0f; a<360.0f; a+=0.2)
+        {
+            x8 = x7+sin(a)*radius;
+            y8 = y7+cos(a)*radius;
+            glVertex2f(x8,y8);
+        }
+        glEnd();
+
+    x9=-0.26, y9= 0.7;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(239,255,84);
+    for (a=0.0f; a<360.0f; a+=0.2)
+        {
+            x0 = x9+sin(a)*radius;
+            y0 = y9+cos(a)*radius;
+            glVertex2f(x0,y0);
+        }
+        glEnd();
+
+    x11=-0.18, y11= 0.63;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(239,255,84);
+    for (a=0.0f; a<360.0f; a+=0.2)
+        {
+            x12 = x11+sin(a)*radius;
+            y12 = y11+cos(a)*radius;
+            glVertex2f(x12,y12);
+        }
+        glEnd();
+
+    x13=-0.3, y13= 0.63;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(239,255,84);
+    for (a=0.0f; a<360.0f; a+=0.2)
+        {
+            x14 = x13+sin(a)*radius;
+            y14 = y13+cos(a)*radius;
+            glVertex2f(x14,y14);
+        }
+        glEnd();
+
+    glPopMatrix();
+}
+
+void clouds2()
+{
+    glPushMatrix();
+    glTranslatef(cloudPosition,0.0f, 0.0f);
+    float x1,y1,x2,y2;
+    float x3,y3,x4,y4;
+    float x5,y5,x6,y6;
+    float x7,y7,x8,y8;
+    float x9,y9,x0,y0;
+    float x11,y11,x12,y12;
+    float x13,y13,x14,y14;
+    float a;
+    double radius=0.07;
+
+    x1=0.5, y1= 0.65;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(239,255,84);
+    for (a=0.0f; a<360.0f; a+=0.2)
+        {
+            x2 = x1+sin(a)*radius;
+            y2 = y1+cos(a)*radius;
+            glVertex2f(x2,y2);
+        }
+        glEnd();
+
+    x3=0.45, y3= 0.56;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(239,255,84);
+    for (a=0.0f; a<360.0f; a+=0.2)
+        {
+            x4 = x3+sin(a)*radius;
+            y4 = y3+cos(a)*radius;
+            glVertex2f(x4,y4);
+        }
+        glEnd();
+
+    x5=0.45, y5= 0.7;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(239,255,84);
+    for (a=0.0f; a<360.0f; a+=0.2)
+        {
+            x6 = x5+sin(a)*radius;
+            y6 = y5+cos(a)*radius;
+            glVertex2f(x6,y6);
+        }
+        glEnd();
+
+    x7=0.36, y7= 0.56;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(239,255,84);
+    for (a=0.0f; a<360.0f; a+=0.2)
+        {
+            x8 = x7+sin(a)*radius;
+            y8 = y7+cos(a)*radius;
+            glVertex2f(x8,y8);
+        }
+        glEnd();
+
+    x9=0.36, y9= 0.7;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(239,255,84);
+    for (a=0.0f; a<360.0f; a+=0.2)
+        {
+            x0 = x9+sin(a)*radius;
+            y0 = y9+cos(a)*radius;
+            glVertex2f(x0,y0);
+        }
+        glEnd();
+
+       x11=0.28, y11= 0.63;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(239,255,84);
+    for (a=0.0f; a<360.0f; a+=0.2)
+        {
+            x12 = x11+sin(a)*radius;
+            y12 = y11+cos(a)*radius;
+            glVertex2f(x12,y12);
+        }
+        glEnd();
+
+    x13=0.4, y13= 0.63;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(239,255,84);
+    for (a=0.0f; a<360.0f; a+=0.2)
+        {
+            x14 = x13+sin(a)*radius;
+            y14 = y13+cos(a)*radius;
+            glVertex2f(x14,y14);
+        }
+        glEnd();
+
+        glPopMatrix();
+}
