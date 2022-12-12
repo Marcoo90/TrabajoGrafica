@@ -499,3 +499,53 @@ void hills()
     glVertex2f(1.0f, 0.2f);
     glEnd();
 }
+void sun()
+{
+    glPushMatrix();
+    glTranslatef(0.0f,sunPosition, 0.0f);
+
+    float x1,y1,x2,y2;
+    float a;
+    double radius=0.1;
+
+    x1=-0.8, y1= 0.7;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(239,255,0);
+    for (a = 0.0f ; a < 360.0f ; a+=0.2)
+        {
+            x2 = x1+sin(a)*radius;
+            y2 = y1+cos(a)*radius;
+            glVertex2f(x2,y2);
+        }
+
+       glEnd();
+
+    glPopMatrix();
+}
+
+
+void moon()
+{
+    glPushMatrix();
+    glTranslatef(0.0f,moonPosition, 0.0f);
+    float x1,y1,x2,y2;
+    float a;
+    double radius=0.08;
+
+    x1=-0.8, y1= -0.5;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3f(255,255,255);
+    for (a=0.0f; a<360.0f; a+=0.2)
+        {
+            x2 = x1+sin(a)*radius;
+            y2 = y1+cos(a)*radius;
+            glVertex2f(x2,y2);
+        }
+      //  sndPlaySound("crick.wav",SND_ASYNC);
+        //PlaySound(NULL, 0, 0);
+        glEnd();
+
+    glPopMatrix();
+}
